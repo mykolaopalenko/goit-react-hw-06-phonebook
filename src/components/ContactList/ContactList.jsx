@@ -3,7 +3,6 @@ import { getValueFilter } from '../../redux/Filters/filtersSelectors';
 import { getContacts } from '../../redux/Contacts/contactsSelectors';
 import { useSelector } from 'react-redux';
 import ContactItem from '../ContactItem/ContactItem';
-import PropTypes from 'prop-types';
 import { Item } from './ContactList.styled';
 
 const ContactList = () => {
@@ -28,16 +27,6 @@ const ContactList = () => {
       ))}
     </ul>
   );
-};
-
-ContactList.propTypes = {
-  contacts: PropTypes.arrayOf(
-    PropTypes.exact({
-      id: PropTypes.string.isRequired,
-      name: PropTypes.string.isRequired,
-      number: PropTypes.string.isRequired,
-    }).isRequired
-  ).isRequired,
 };
 
 export default ContactList;
